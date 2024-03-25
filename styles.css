@@ -52,7 +52,7 @@ body {
     border-bottom: none;
   }
 
-  .delete-button {
+  .delete-button, .edit-button {
     float: right;
     background-color: #eb6d64;
     color: white;
@@ -61,11 +61,18 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 4px 8px;
-   
   }
   
-  .delete-button:hover {
+  .delete-button:hover{
     background-color: #cc0000;
   }
 
+  .edit-button {
+    background-color: #9be9e2;
+    margin-right: 5px;
+    padding: 3px 5px;
+  }
   
+   .edit-button:hover {
+    background-color: #1bb3eb;
+  }
