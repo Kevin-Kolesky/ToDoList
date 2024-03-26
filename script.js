@@ -5,6 +5,12 @@ let items = JSON.parse(localStorage.getItem('items')) || [];
 function addItem(){
     let item = document.getElementById('todo-input').value;
     
+    if( item == "" ) {
+        alert( "To-Do item can not be empty!" );
+        document.getElementById('todo-input').focus() ;
+        return;
+     }
+
     items.push(item);
     localStorage.setItem('items', JSON.stringify(items));
 
@@ -41,10 +47,14 @@ document.addEventListener('click', function(event) {
     if (event.target.classList.contains('edit-button')) {
         const id = event.target.id.replace('edit', ''); // Remove "edit" text from the ID
         let newText = prompt('Edit item:', "");
-        if (newText !== null) {
+        if (newText !== "") {
             items[id] = newText;
             localStorage.setItem('items', JSON.stringify(items));
             displayItems();
+      }else{
+        alert( "To-Do item can not be empty!" );
+        document.getElementById('todo-input').focus() ;
+        return;
       }
     }
 });
