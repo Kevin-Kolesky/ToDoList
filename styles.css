@@ -1,0 +1,32 @@
+.trashcan {
+    width: 20px;
+    height: 20px;
+    
+    .trashcan-open {
+      display: none;
+    }
+    
+    &:hover {
+      .trashcan-open {
+        display: inline;
+      }
+      .trashcan-closed {
+        display: none;
+      }
+    }
+    
+}
+
+.danger-button{
+    color: black !important;
+    margin-left: 7px;
+}
+
+.list-group{
+    max-width: 80% !important;
+    margin: 0 auto;
+}
+
+svg {
+  vertical-align: text-top !important;
+}
